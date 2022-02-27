@@ -1,17 +1,11 @@
 <?php
 function createUserService($user_data) {
     $rootDir = realpath($_SERVER["DOCUMENT_ROOT"]);
+    require $rootDir . '/utiles/createFileContents.php';
     require $rootDir . '/models/User.php';
     $USERS_PATH = $rootDir . '/files/users.json';
 
-    if(file_exists($USERS_PATH)) {
-      $users_file_content = file_get_contents($USERS_PATH);
-    } else {
-      $users_file = fopen($USERS_PATH, 'a+');
-      fwrite($users_file, '[]');
-      fclose($users_file);
-      $users_file_content = file_get_contents($USERS_PATH);
-    }
+    $users_file_content = createFileContents($USERS_PATH);
 
     $users = json_decode($users_file_content, true);
     
