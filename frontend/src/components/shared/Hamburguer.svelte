@@ -8,39 +8,41 @@
   :root {
     --borderSize: .4rem;
   }
-  button {
-    height: 2.2rem;
-    width: 3.2rem;
-    color: white;
-    z-index: inherit;
-    background-color: transparent;
-    border-top: var(--borderSize) solid currentColor;
-    border-radius: .4rem;
-    transition: 400ms;
-  }
 
+  button,
   button::before,
   button::after {
-    content: "";
     display: block;
-    width: 3.2rem;
+    width: 3rem;
     height: var(--borderSize);
-    background-color: currentColor;
-    border-radius: .4rem;
+    background-color: white;
+    border-radius: .2rem;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    position: absolute;
+  }
+
+  button::before {
+    content: '';
     margin-top: .6rem;
-    transition: transform 400ms;
-    position: relative;
+  }
+
+  button::after {
+    content: '';
+    margin-top: 1.4rem;
   }
   .active {
-    border-top: transparent;
-    color: var(--background-color);
+    transition: background-color .1s;
+    background-color: transparent;
+    /* color: var(--background-color); */
   }
   .active::before {
+    color: white;
     transform: rotate(135deg);
     top: .4rem;
   }
   .active::after {
+    color: white;
     transform: rotate(-135deg);
-    top: -.6rem;
+    top: -.4rem;
   }
 </style>

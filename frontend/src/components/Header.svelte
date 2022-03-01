@@ -1,5 +1,7 @@
 <script>
   import { getContext } from 'svelte'
+  import Icon from 'svelte-icons-pack/';
+  import FiShoppingCart from 'svelte-icons-pack/fi/FiShoppingCart';
   import Hamburguer from "./shared/Hamburguer.svelte";
   import Input from './shared/Input.svelte';
 
@@ -7,12 +9,15 @@
 </script>
 
 <header>
+  <h2>FE</h2>
+  <div class="search">
+    <Input class="input" type="search" placeholder="Search a product"/>
+  </div>
   <div class="hamburguer">
     <Hamburguer on:click={toggleMenu} active={$isMenuVisible}/>
   </div>
-  <div class="content">
-    <h2>Flash Express</h2>
-    <Input type="search" placeholder="Search a product"/>
+  <div class="cart-container">
+    <Icon class="icon" src={FiShoppingCart} size="32" />
   </div>
 </header>
 
@@ -21,19 +26,30 @@
     display: flex;
     background-color: var(--primary-color);
     box-shadow: var(--elevation-4dp);
-  }
-  .hamburguer {
-    margin: 1rem;
+    flex: 1;
+    padding: .8rem;
+    align-items: center;
+    color: #fff;
   }
 
-  .content {
+  header > h2 {
+    margin-inline-end: .8rem;
+  }
+  .search {
     display: flex;
-    flex-direction: column;
-    margin-bottom: .8rem;
+    align-items: stretch;
+    flex: 1;
   }
 
-  .content h2 {
-    padding: .6rem 0;
+  .hamburguer {
+    display: flex;
+    margin: 1rem;
+    margin-bottom: 1.4rem;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
-
+  .cart-container {
+    align-items: center;
+    justify-content: center;
+  }
 </style>
