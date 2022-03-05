@@ -15,7 +15,7 @@
     display: block;
     width: 3rem;
     height: var(--borderSize);
-    background-color: white;
+    background-color: var(--accent-color);
     border-radius: .2rem;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     position: absolute;

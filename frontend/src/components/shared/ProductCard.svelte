@@ -50,7 +50,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border-bottom: 1px solid rgb(212, 209, 209);
+    /* border-bottom: 1px solid rgb(212, 209, 209); */
     flex: 1;
   }
   img {

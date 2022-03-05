@@ -11,7 +11,7 @@
 <header>
   <h2>FE</h2>
   <div class="search">
-    <Input class="input" type="search" placeholder="Search a product"/>
+    <Input class="input" IconSvg={FiShoppingCart} type="search" placeholder="Search a product"/>
   </div>
   <div class="hamburguer">
     <Hamburguer on:click={toggleMenu} active={$isMenuVisible}/>
@@ -29,7 +29,7 @@
     flex: 1;
     padding: .8rem;
     align-items: center;
-    color: #fff;
+    color: var(--accent-color);
   }
 
   header > h2 {
