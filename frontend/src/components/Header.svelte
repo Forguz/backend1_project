@@ -2,6 +2,7 @@
   import { getContext } from 'svelte'
   import Icon from 'svelte-icons-pack/';
   import FiShoppingCart from 'svelte-icons-pack/fi/FiShoppingCart';
+  import FiSearch from 'svelte-icons-pack/fi/FiSearch';
   import Hamburguer from "./shared/Hamburguer.svelte";
   import Input from './shared/Input.svelte';
 
@@ -9,9 +10,9 @@
 </script>
 
 <header>
-  <h2>FE</h2>
+  <h1>FE</h1>
   <div class="search">
-    <Input class="input" IconSvg={FiShoppingCart} type="search" placeholder="Search a product"/>
+    <Input class="input" IconSvg={FiSearch} type="search" placeholder="Search a product"/>
   </div>
   <div class="cart-container">
     <Icon class="icon" src={FiShoppingCart} size="32" />
@@ -32,24 +33,25 @@
     color: var(--accent-color);
   }
 
-  header > h2 {
+  header > h1 {
     margin-inline-end: .8rem;
   }
   .search {
     display: flex;
     flex: 1;
+    margin-left: .8rem;
   }
 
   .hamburguer {
     display: flex;
     margin: 1rem;
-    margin-bottom: 1.4rem;
     justify-content: center;
     align-items: center;
   }
   .cart-container {
     align-items: center;
     justify-content: center;
-    margin-left: .4rem;
+    height: 100%;
+    margin-left: 1rem;
   }
 </style>

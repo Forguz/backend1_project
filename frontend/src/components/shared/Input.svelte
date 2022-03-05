@@ -7,21 +7,30 @@
 
 <div>
   {#if IconSvg}
-    <Icon className="icon mr4" src={IconSvg} size={16} />
+    <label for="input">
+      <Icon className="icon" src={IconSvg} size={16} />
+    </label>
   {/if}
-  <input type={type} {placeholder}>
+  <input id="input" type={type} {placeholder}>
 </div>
 
 <style>
   div {
     background: var(--background-color);
-    border-radius: 1rem;
+    border-radius: .6rem;
     border: .2rem solid var(--background-color);
     color: var(--font-color);
-    padding: .8rem;
     width: 100%;
     align-items: center;
     display: flex;
+  }
+
+  label {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
   }
   input {
     flex: 1;
@@ -30,6 +39,8 @@
     color: currentColor;
     outline: none;
     margin-left: .4rem;
+    padding: .8rem;
+    padding-left: .6rem;
   }
 
   input::placeholder {
