@@ -13,11 +13,11 @@
   <div class="search">
     <Input class="input" IconSvg={FiShoppingCart} type="search" placeholder="Search a product"/>
   </div>
-  <div class="hamburguer">
-    <Hamburguer on:click={toggleMenu} active={$isMenuVisible}/>
-  </div>
   <div class="cart-container">
     <Icon class="icon" src={FiShoppingCart} size="32" />
+  </div>
+  <div class="hamburguer">
+    <Hamburguer on:activate={() => console.log('DSADOKS')} active={$isMenuVisible}/>
   </div>
 </header>
 
@@ -37,7 +37,6 @@
   }
   .search {
     display: flex;
-    align-items: stretch;
     flex: 1;
   }
 
@@ -45,11 +44,12 @@
     display: flex;
     margin: 1rem;
     margin-bottom: 1.4rem;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
   }
   .cart-container {
     align-items: center;
     justify-content: center;
+    margin-left: .4rem;
   }
 </style>

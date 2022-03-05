@@ -29,6 +29,7 @@
     border: 0;
     color: currentColor;
     outline: none;
+    margin-left: .4rem;
   }
 
   input::placeholder {
