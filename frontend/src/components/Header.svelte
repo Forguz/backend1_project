@@ -18,7 +18,7 @@
     <Icon class="icon" src={FiShoppingCart} size="32" />
   </div>
   <div class="hamburguer">
-    <Hamburguer on:activate={() => console.log('DSADOKS')} active={$isMenuVisible}/>
+    <Hamburguer on:activate={toggleMenu} active={$isMenuVisible}/>
   </div>
 </header>
 

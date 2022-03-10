@@ -57,7 +57,7 @@
   }
 
   .rotate1 {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateY(.05rem);
   }
 
   .rotate2 {
@@ -65,43 +65,6 @@
   }
 
   .rotate3 {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateY(-.05rem);
   }
-
-  /* button,
-  button::before,
-  button::after {
-    display: block;
-    width: 3rem;
-    height: var(--borderSize);
-    background-color: var(--accent-color);
-    border-radius: 0.2rem;
-    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    position: absolute;
-  } */
-
-  /* button::before {
-    content: "";
-    margin-top: 0.6rem;
-  }
-
-  button::after {
-    content: "";
-    margin-top: 1.4rem;
-  } */
-  /* .active {
-    transition: background-color 0.1s;
-    background-color: transparent;
-    /* color: var(--background-color); */
-  /* }
-  .active::before {
-    color: white;
-    transform: rotate(135deg);
-    top: 0.4rem;
-  }
-  .active::after {
-    color: white;
-    transform: rotate(-135deg);
-    top: -0.4rem;
-  } */
 </style>

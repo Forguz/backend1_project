@@ -14,19 +14,10 @@
     <p class="name">{name}</p>
   </div>
 </div>
-<div class="card">
-  <div class="image">
-    <img src={image_src} alt={image_alt} />
-  </div>
-  <div class="content">
-    <p class="price">R$ 14,999,99</p>
-    <p class="name">{name}</p>
-  </div>
-</div>
 
 <style>
   :root {
-    --card-size: 16rem;
+    --card-width: 16rem;
   }
   .card {
     cursor: pointer;
@@ -34,7 +25,8 @@
     display: flex;
     flex-direction: column;
     max-height: 100%;
-    width: var(--card-size);
+    width: var(--card-width);
+    min-width: var(--card-width);
     border-radius: 0.6rem;
     box-shadow: var(--elevation-1dp);
     transition: box-shadow 0.2s;
@@ -55,7 +47,7 @@
   }
   img {
     flex-shrink: 0;
-    max-width: var(--card-size);
+    max-width: var(--card-width);
     width: 100%;
     object-fit: fill;
   }
@@ -77,6 +69,5 @@
 
   .content > .price {
     font-size: 1.6rem;
-    /* color: #1ea31e; */
   }
 </style>

@@ -1,5 +1,5 @@
 <script>
-	import { getContext, onMount, setContext } from 'svelte';
+	import { setContext } from 'svelte';
 	import { isMenuVisible } from './stores/menu';
 
   import Router from "./routes/index.svelte";
