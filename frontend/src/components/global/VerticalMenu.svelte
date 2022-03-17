@@ -2,14 +2,16 @@
   import { getContext } from 'svelte';
   import { slide } from 'svelte/transition'
   import { links } from 'svelte-routing';
+  import routes from '../../routes/routes';
 
-  const { isMenuVisible } = getContext('menu');
+  const { isMenuVisible, toggleMenu } = getContext('menu');
 </script>
 
 {#if $isMenuVisible}
   <div transition:slide use:links class="container">
-    <a href="/" class="link">Home</a>
-    <a href="/profile" class="link">Profile</a>
+    {#each routes as {route, page}}
+      <a href={route} on:click={toggleMenu} class="link">{page.name}</a>
+    {/each}
   </div>
 {/if}
 
