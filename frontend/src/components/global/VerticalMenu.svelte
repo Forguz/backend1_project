@@ -8,10 +8,8 @@
 
 {#if $isMenuVisible}
   <div transition:slide use:links class="container">
-    <a href="/home" class="link">Home</a>
-    <a href="/home" class="link">Homeeeee</a>
-    <a href="/home" class="link">Home</a>
-    <a href="/home" class="link">Home</a>
+    <a href="/" class="link">Home</a>
+    <a href="/profile" class="link">Profile</a>
   </div>
 {/if}
 
@@ -25,6 +23,7 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(41, 18, 17, .95);
+    z-index: 10;
   }
 
   .link {

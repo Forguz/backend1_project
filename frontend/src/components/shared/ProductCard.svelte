@@ -3,6 +3,7 @@
   export let image_src;
   export let image_alt;
   export let name;
+  export let price = 'R$ 14,999,99';
 </script>
 
 <div class="card">
@@ -10,7 +11,7 @@
     <img src={image_src} alt={image_alt} />
   </div>
   <div class="content">
-    <p class="price">R$ 14,999,99</p>
+    <p class="price">{price}</p>
     <p class="name">{name}</p>
   </div>
 </div>

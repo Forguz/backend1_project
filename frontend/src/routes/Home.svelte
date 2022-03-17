@@ -16,14 +16,41 @@
 <svelte:head>
   <title>Home</title>
 </svelte:head>
-<div>
-  {#each products as product }
-    <ProductCard image_src={srcImage} name={productName}/>
-  {/each}
-</div>
+<section>
+  <h2>Placas de Video</h2>
+  <div class="card-wrapper">
+    {#each products as product }
+      <ProductCard image_src={srcImage} name={productName}/>
+    {/each}
+  </div>
+</section>
+<section>
+  <h2>Placas de Video</h2>
+  <div class="card-wrapper">
+    {#each products as product }
+      <ProductCard image_src={srcImage} name={productName}/>
+    {/each}
+  </div>
+</section>
+<section>
+  <h2>Placas de Video</h2>
+  <div class="card-wrapper">
+    {#each products as product }
+      <ProductCard image_src={srcImage} name={productName}/>
+    {/each}
+  </div>
+</section>
 
 <style>
-  div {
+  section {
+    position: relative;
+  }
+  h2 {
+    display: block;
+    padding: 1rem;
+    position: relative;
+  }
+  .card-wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;

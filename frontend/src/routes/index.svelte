@@ -1,12 +1,11 @@
 <script>
-  import { getContext } from 'svelte';
   import { Router, Route } from 'svelte-routing';
-  import Home from './Home.svelte';
-  import VerticalMenu from './VerticalMenu.svelte';
+  import routes from './routes';
   export let url = '';
 </script>
 
 <Router {url}>
-  <Route path='/' component={VerticalMenu}/>
-  <Route path='/home' component={Home}/>
+  {#each routes as {route, page}}
+    <Route path={route} component={page}/>
+  {/each}
 </Router>
