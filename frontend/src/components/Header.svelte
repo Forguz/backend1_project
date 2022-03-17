@@ -6,7 +6,7 @@
   import Hamburguer from "./shared/Hamburguer.svelte";
   import Input from './shared/Input.svelte';
 
-  const { toggleMenu, isMenuVisible } = getContext('menu');
+  const { toggleMenu } = getContext('menu');
 </script>
 
 <header>
@@ -18,7 +18,7 @@
     <Icon class="icon" src={FiShoppingCart} size="32" />
   </div>
   <div class="hamburguer">
-    <Hamburguer on:activate={toggleMenu} active={$isMenuVisible}/>
+    <Hamburguer on:activate={toggleMenu}/>
   </div>
 </header>
 
