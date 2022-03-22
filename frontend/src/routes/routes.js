@@ -1,5 +1,11 @@
 import Home from './Home.svelte';
-import Profile from './Profile.svelte';
+import Products from './Products.svelte';
+import SignIn from './SignIn.svelte';
+
+export const signInRoute = {
+  page: SignIn,
+  route: '/sign-in'
+}
 
 export default [
   {
@@ -7,7 +13,7 @@ export default [
     route: '/'
   },
   {
-    page: Profile,
-    route: '/profile'
+    page: Products,
+    route: '/products'
   }
 ]

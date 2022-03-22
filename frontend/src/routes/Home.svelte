@@ -1,9 +1,7 @@
 <script>
-  import Button from '../components/shared/Button.svelte';
   import ProductCard from '../components/shared/ProductCard.svelte';
-  import FiSearch from 'svelte-icons-pack/fi/FiPlus';
 
-  const srcImage = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgamespredator.com%2Fwp-content%2Fuploads%2F2020%2F09%2FNvidia-rtx-3090-evga.jpg&f=1&nofb=1'
+  // const srcImage = '../components/download.jpeg'
   const productName = 'ASUS GEFORCE RTX 3090'
   const products = [
     1,
@@ -20,7 +18,7 @@
   <h2>Placas de Video</h2>
   <div class="card-wrapper">
     {#each products as product }
-      <ProductCard image_src={srcImage} name={productName}/>
+      <ProductCard name={productName}/>
     {/each}
   </div>
 </section>
@@ -28,7 +26,7 @@
   <h2>Placas de Video</h2>
   <div class="card-wrapper">
     {#each products as product }
-      <ProductCard image_src={srcImage} name={productName}/>
+      <ProductCard name={productName}/>
     {/each}
   </div>
 </section>
@@ -36,7 +34,7 @@
   <h2>Placas de Video</h2>
   <div class="card-wrapper">
     {#each products as product }
-      <ProductCard image_src={srcImage} name={productName}/>
+      <ProductCard name={productName}/>
     {/each}
   </div>
 </section>

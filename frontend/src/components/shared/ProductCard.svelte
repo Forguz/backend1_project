@@ -1,6 +1,5 @@
 <script>
-  import Button from "../shared/Button.svelte";
-  export let image_src;
+  export let image_src = 'images/download.jpeg';
   export let image_alt = 'image';
   export let name;
   export let price = 'R$ 14,999,99';

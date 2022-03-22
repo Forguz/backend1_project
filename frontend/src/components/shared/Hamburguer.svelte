@@ -1,20 +1,19 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, getContext } from 'svelte';
   const dispatch = createEventDispatcher();
-
-  let activated = false;
-
+  const { activated, toggleHamburguer } = getContext('hamburguer');
+  
   function handleClick() {
-    activated = !activated;
+    toggleHamburguer();
 
     dispatch('activate');
   }
 </script>
 
 <button on:click={handleClick}>
-  <span class="{activated ? 'line line1 rotate1' : 'line line1'}" />
-  <span class="{activated ? 'line line2 rotate2' : 'line line2'}"/>
-  <span class="{activated ? 'line line3 rotate3' : 'line line3'}"/>
+  <span class="{$activated ? 'line line1 rotate1' : 'line line1'}" />
+  <span class="{$activated ? 'line line2 rotate2' : 'line line2'}"/>
+  <span class="{$activated ? 'line line3 rotate3' : 'line line3'}"/>
 </button>
 
 <style>
