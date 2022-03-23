@@ -2,7 +2,7 @@
   import { getContext } from "svelte";
   import { slide } from "svelte/transition";
   import { links } from "svelte-routing";
-  import routes from "../../routes/routes";
+  import routes from "../../routes";
 
   const { isMenuVisible, toggleMenu } = getContext("menu");
   const { toggleHamburguer } = getContext("hamburguer");
@@ -87,7 +87,7 @@
   .link:hover {
     color: var(--font-color);
   }
-  .session {
+  /* .session {
     display: flex;
     justify-self: flex-end;
   }
@@ -97,5 +97,5 @@
     justify-content: center;
     justify-self: flex-end;
     text-align: center;
-  }
+  } */
 </style>

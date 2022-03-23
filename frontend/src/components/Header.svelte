@@ -1,5 +1,6 @@
 <script>
   import { getContext } from 'svelte';
+  import { navigate } from 'svelte-routing';
   import IconButton from './shared/IconButton.svelte';
   import FiShoppingCart from 'svelte-icons-pack/fi/FiShoppingCart';
   import FiUser from 'svelte-icons-pack/fi/FiUser';
@@ -8,6 +9,10 @@
   import Input from './shared/Input.svelte';
 
   const { toggleMenu } = getContext('menu');
+
+  function handleUserClick() {
+    navigate('/sign', { replace: true })
+  }
 </script>
 
 <header>
@@ -17,7 +22,7 @@
       <IconButton icon={FiShoppingCart} size="32" />
     </div>
     <div class="cart-container">
-      <IconButton icon={FiUser} size="32" />
+      <IconButton icon={FiUser} on:click={handleUserClick} size="32" />
     </div>
     <div class="hamburguer">
       <Hamburguer on:activate={toggleMenu}/>

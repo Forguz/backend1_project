@@ -1,6 +1,6 @@
 <script>
   import { Router, Route } from 'svelte-routing';
-  import routes, { signInRoute } from './routes';
+  import routes, { signInRoute } from '.';
   export let url = '';
 </script>
 

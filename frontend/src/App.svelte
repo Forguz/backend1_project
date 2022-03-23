@@ -3,7 +3,7 @@
 	import { isMenuVisible } from './stores/menu';
   import { activated } from './stores/hamburguer';
 
-  import Router from "./routes/index.svelte";
+  import Router from "./routes/Routes.svelte";
   import Header from "./components/Header.svelte";
   import VerticalMenu from "./components/global/VerticalMenu.svelte"
 

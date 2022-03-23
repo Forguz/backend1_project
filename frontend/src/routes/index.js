@@ -1,10 +1,10 @@
 import Home from './Home.svelte';
 import Products from './Products.svelte';
-import SignIn from './SignIn.svelte';
+import Sign from './sign.svelte';
 
 export const signInRoute = {
-  page: SignIn,
-  route: '/sign-in'
+  page: Sign,
+  route: '/sign'
 }
 
 export default [

@@ -4,7 +4,7 @@
   export let size = 32;
 </script>
 
-<button>
+<button on:click>
   <Icon class="icon" src={icon} size={size} />
 </button>
 
