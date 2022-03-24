@@ -1,9 +1,12 @@
 <script>
+  export {className as class}
+  let className = '';
   import Icon from 'svelte-icons-pack/Icon.svelte'
   export let IconSvg;
+  export let type = 'button';
 </script>
 
-<button on:click {...$$restProps}>
+<button {type} on:click {...$$restProps} class:margin-top={className === 'margin-top'}>
   {#if IconSvg}
     <Icon className="icon-bold mr4" src={IconSvg} size="16" />
   {/if}
@@ -31,11 +34,15 @@
   }
 
   button:hover {
+    filter: brightness(90%);
     box-shadow: var(--elevation-8dp);
   }
 
   button:active {
-    box-shadow: none;
-    filter: brightness(80%);
+    filter: brightness(120%);
+  }
+
+  .margin-top {
+    margin-top: .8rem;
   }
 </style>

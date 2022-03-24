@@ -1,8 +1,6 @@
 <script>
   import { getContext } from "svelte";
   import { slide } from "svelte/transition";
-  import { links } from "svelte-routing";
-  import routes from "../../routes";
 
   const { isMenuVisible, toggleMenu } = getContext("menu");
   const { toggleHamburguer } = getContext("hamburguer");
@@ -14,10 +12,10 @@
 </script>
 
 {#if $isMenuVisible}
-  <div transition:slide use:links class="container">
-    {#each routes as { route, page }}
-      <a href={route} on:click={handleRouteClick} class="link">{page.name}</a>
-    {/each}
+  <div transition:slide class="container">
+    <a href='/' on:click={handleRouteClick} class="link">home</a>
+    <!-- {#each routes as { route, page }}
+    {/each} -->
   </div>
 {/if}
 

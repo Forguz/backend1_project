@@ -1,7 +1,7 @@
 <script>
   import Icon from 'svelte-icons-pack';
   export let icon;
-  export let size = 32;
+  export let size = '32';
 </script>
 
 <button on:click>

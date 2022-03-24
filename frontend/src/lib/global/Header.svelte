@@ -1,17 +1,18 @@
 <script>
   import { getContext } from 'svelte';
-  import { navigate } from 'svelte-routing';
-  import IconButton from './shared/IconButton.svelte';
+  import { goto } from '$app/navigation';
+  // import { navigate } from 'svelte-routing';
   import FiShoppingCart from 'svelte-icons-pack/fi/FiShoppingCart';
   import FiUser from 'svelte-icons-pack/fi/FiUser';
   import FiSearch from 'svelte-icons-pack/fi/FiSearch';
-  import Hamburguer from "./shared/Hamburguer.svelte";
-  import Input from './shared/Input.svelte';
+  import IconButton from '../shared/IconButton.svelte';
+  import Hamburguer from "../shared/Hamburguer.svelte";
+  import Input from '../shared/Input.svelte';
 
   const { toggleMenu } = getContext('menu');
 
   function handleUserClick() {
-    navigate('/sign', { replace: true })
+    goto('/sign');
   }
 </script>
 
@@ -39,6 +40,7 @@
     background-color: var(--primary-color);
     box-shadow: var(--elevation-4dp);
     flex: 1;
+    z-index: 9;
     padding: .8rem;
     align-items: center;
     flex-direction: column;

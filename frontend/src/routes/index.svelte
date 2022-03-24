@@ -1,5 +1,5 @@
 <script>
-  import ProductCard from '../components/shared/ProductCard.svelte';
+  import ProductCard from '$lib/shared/ProductCard.svelte';
 
   // const srcImage = '../components/download.jpeg'
   const productName = 'ASUS GEFORCE RTX 3090'
@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>Home</title>
+  <title>home</title>
 </svelte:head>
 <section>
   <h2>Placas de Video</h2>
