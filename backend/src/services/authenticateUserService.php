@@ -12,7 +12,7 @@
         if($user["email"] == $email && password_verify($password, $user["password"])) {
           $headers = array('alg'=>'HS256','typ'=>'JWT');
           $payload = array('sub'=>'1234567890','email'=>$email, 'exp'=>(time() + 60 * 60 * 24));
-          echo json_encode(array('jwt'=>generate_jwt($headers, $payload));
+          return json_encode(array('jwt'=>generate_jwt($headers, $payload));
           break;
         } else {
           throw new Exception('Invalid email/password combination.', 409);

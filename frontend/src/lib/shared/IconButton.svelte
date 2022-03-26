@@ -10,7 +10,7 @@
 
 <style>
   button {
-    padding: .8rem;
+    padding: .4rem;
     display: block;
     border-radius: 50%;
     color: var(--accent-color);

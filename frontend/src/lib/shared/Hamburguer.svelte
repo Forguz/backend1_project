@@ -22,10 +22,8 @@
   }
 
   button {
-    height: 26px;
-    width: 32px;
-    top: 17px;
-    left: 20px;
+    height: 18px;
+    width: 24px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -35,7 +33,7 @@
 
   .line {
     display: block;
-    height: 4px;
+    height: 2px;
     width: 100%;
     border-radius: 10px;
     background: var(--accent-color);
@@ -56,7 +54,7 @@
   }
 
   .rotate1 {
-    transform: rotate(45deg) translateY(.05rem);
+    transform: rotate(42deg) translateY(.05rem);
   }
 
   .rotate2 {
@@ -64,6 +62,6 @@
   }
 
   .rotate3 {
-    transform: rotate(-45deg) translateY(-.05rem);
+    transform: rotate(-42deg) translateY(-.05rem);
   }
 </style>

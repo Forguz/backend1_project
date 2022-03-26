@@ -5,6 +5,6 @@
 
     $jwt = generate_jwt($headers, $payload);
 
-    echo $jwt;
+    return $jwt;
   }
 ?>

@@ -14,14 +14,12 @@
 {#if $isMenuVisible}
   <div transition:slide class="container">
     <a href='/' on:click={handleRouteClick} class="link">home</a>
-    <!-- {#each routes as { route, page }}
-    {/each} -->
   </div>
 {/if}
 
 <style>
   .container {
-    position: absolute;
+    position: fixed;
     display: flex;
     width: 100%;
     height: 100%;
@@ -85,15 +83,4 @@
   .link:hover {
     color: var(--font-color);
   }
-  /* .session {
-    display: flex;
-    justify-self: flex-end;
-  }
-  .login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: flex-end;
-    text-align: center;
-  } */
 </style>
